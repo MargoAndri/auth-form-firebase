@@ -1,0 +1,37 @@
+{
+  "name": "package",
+  "version": "1.0.0",
+  "description": "liis_auth_form",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --mode development --open --hot",
+    "test": "echo \\\"Error: no test specified\\\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MargoAndri/auth_form.git"
+  },
+  "author": "Margarita Andriasyan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MargoAndri/auth_form/issues"
+  },
+  "homepage": "https://github.com/MargoAndri/auth_form#readme",
+  "devDependencies": {
+    "@babel/core": "^7.8.6",
+    "@babel/preset-env": "^7.8.6",
+    "@babel/preset-react": "^7.8.3",
+    "babel-loader": "^8.0.6",
+    "html-webpack-plugin": "^3.2.0",
+    "webpack": "^4.41.6",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  },
+  "dependencies": {
+    "prop-types": "^15.7.2",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
+    "react-redux": "^7.2.0",
+    "redux": "^4.0.5"
+  }
+}
