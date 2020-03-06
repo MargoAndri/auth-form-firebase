@@ -3,9 +3,10 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 
 const Button = styled.button`
-  margin: 5px;
   padding: 15px 50px;
+  align-self: center;
   color: #fff;
+  margin: 15px;
   background: #312965;
   background: linear-gradient(to bottom, #302f6c, #2c1f4f);
   border-radius: 25px;
@@ -21,9 +22,9 @@ const Button = styled.button`
 `;
 
 function RegisterButton(props) {
-    const {onClick} = props;
+    const {onClick, buttonTitle} = props;
     return (
-        <Button onClick={onClick} type="button">Register</Button>
+        <Button onClick={onClick} type="button">{buttonTitle}</Button>
     );
 }
 

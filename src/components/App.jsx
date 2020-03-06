@@ -1,8 +1,8 @@
 import React, {Component} from "react";
-import RegisterButton from "./common/Button.jsx";
 import GlobalStyles from "../styles/GlobalStyles.jsx";
 import styled from "styled-components";
 import RegisterFormContainer from "../containers/RegisterFormContainer.jsx";
+import image from "../img/cosmos.png";
 
 const ContentContainer = styled.div`
   margin-left: auto;
@@ -15,14 +15,29 @@ const ContentContainer = styled.div`
   }
 `;
 
+const ColOne = styled.div`
+    position: relative;
+    width: 50%;
+    float: left;
+    margin: 10px;
+`;
+
+const ColTwo = styled.div`
+  position: relative;
+  width: 50%;
+  float: right;
+`;
+
 class App extends Component {
     render() {
         return (
             <ContentContainer>
-                <RegisterFormContainer />
-                <div>
-                    <RegisterButton />
-                </div>
+                    <ColOne>
+                        <RegisterFormContainer />
+                    </ColOne>
+                    <ColTwo>
+                        <img src={image} alt="cosmos-image" />
+                    </ColTwo>
                 <GlobalStyles />
             </ContentContainer>
         );
