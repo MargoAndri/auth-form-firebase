@@ -7,8 +7,8 @@ const reduxSagaFirebase = new ReduxSagaFirebase(firebase);
 
 function* toRegisterNewUser({ user }) {
     try {
+        console.log('test');
         const result = yield call(reduxSagaFirebase.auth.createUserWithEmailAndPassword, user.email, user.password);
-        console.log(result.user);
         const userInfo = {
             email: user.email,
             firstName: user.firstName,

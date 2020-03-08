@@ -3,14 +3,16 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 
 const InputWrapper = styled.div`
-    margin: 15px;
-    width: ${props => (props.special ? '235px' : '500px')};
+    margin-bottom: 25px;
+    margin-left: ${props => (props.special ? '10px' : '0')};
+    width: 100%;
 `;
 
 const FormInput = styled.input`
   width: 100%;
   margin-top: 10px;
   padding: 5px;
+  padding-bottom: 15px;
   background-color: #fffff;
   font-size: 14px;
   border: none;

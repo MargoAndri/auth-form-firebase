@@ -4,6 +4,11 @@ import Form from "../components/RegisterForm.jsx";
 
 
 export default connect(
-    null,
+    state => {
+        console.log(state);
+        return {
+            isClose: state.auth.isClose,
+        };
+    },
     { onSubmitNewUser },
 )(Form);

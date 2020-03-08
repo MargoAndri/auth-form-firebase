@@ -8,6 +8,7 @@ import { Provider } from "react-redux";
 import createSagaMiddleware from "redux-saga";
 import App from "./components/App.jsx";
 import rootSaga from "./ducks/rootSaga.js";
+import auth from './ducks/auth/reducer.js';
 import firebase from "./services/api/firebase.js";
 
 
@@ -15,7 +16,8 @@ const rrfConfig = {
     userProfile: 'users'
 };
 const rootReducer = combineReducers({
-    firebase: firebaseReducer
+    firebase: firebaseReducer,
+    auth,
 });
 const sagaMiddleware = createSagaMiddleware();
 const store = createStore(

@@ -22,9 +22,9 @@ const Button = styled.button`
 `;
 
 function RegisterButton(props) {
-    const {onClick, buttonTitle} = props;
+    const {type, buttonTitle} = props;
     return (
-        <Button onClick={onClick} type="button">{buttonTitle}</Button>
+        <Button type={type}>{buttonTitle}</Button>
     );
 }
 
