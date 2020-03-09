@@ -2,6 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 
+// Input styles
+
 const InputWrapper = styled.div`
     margin-bottom: 15px;
     width: 100%;
@@ -30,6 +32,7 @@ const Label = styled.label`
   color: #928c88;
 `;
 
+// Input
 
 function Input(props) {
     const {text, type, placeholder, name, value, onChange, special} = props;
@@ -42,5 +45,15 @@ function Input(props) {
         </InputWrapper>
     );
 }
+
+Input.propTypes = {
+    text: PropTypes.string,
+    type: PropTypes.string,
+    placeholder: PropTypes.string,
+    name: PropTypes.string,
+    value: PropTypes.string,
+    onChange: PropTypes.func,
+    special: PropTypes.bool,
+};
 
 export default Input;

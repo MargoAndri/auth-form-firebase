@@ -2,6 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
+// Button styles
+
 const Button = styled.button`
   padding: 15px 50px;
   align-self: center;
@@ -21,6 +23,8 @@ const Button = styled.button`
   }
 `;
 
+// Button
+
 function RegisterButton(props) {
     const {type, buttonTitle} = props;
     return (
@@ -29,8 +33,8 @@ function RegisterButton(props) {
 }
 
 RegisterButton.propTypes = {
-    onClick: PropTypes.func,
-    text: PropTypes.string,
+    type: PropTypes.string,
+    buttonTitle: PropTypes.string,
 };
 
 export default RegisterButton;

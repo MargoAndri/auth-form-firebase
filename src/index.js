@@ -15,20 +15,25 @@ import firebase from "./services/api/firebase.js";
 const rrfConfig = {
     userProfile: 'users'
 };
+
 const rootReducer = combineReducers({
     firebase: firebaseReducer,
     auth,
 });
+
 const sagaMiddleware = createSagaMiddleware();
+
 const store = createStore(
     rootReducer,
     applyMiddleware(sagaMiddleware)
 );
+
 const rrfProps = {
     firebase,
     config: rrfConfig,
     dispatch: store.dispatch,
 };
+
 sagaMiddleware.run(rootSaga);
 
 

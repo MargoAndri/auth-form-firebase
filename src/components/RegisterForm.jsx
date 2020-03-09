@@ -8,6 +8,7 @@ import Input from "./common/Input.jsx";
 import image from "../img/cosmos.png";
 import Logo from "../img/svg_1.svg";
 
+// Register Form styles
 const Wrapper = styled.div`
     margin-left: auto;
     margin-right: auto;
@@ -94,6 +95,8 @@ const Background = styled.div`
     }
 `;
 
+// Register Form validation
+
 const formSchema = Yup.object().shape({
     email: Yup.string()
         .email('The email is incorrect')
@@ -104,7 +107,15 @@ const formSchema = Yup.object().shape({
     password: Yup.string().min(6, 'Password must be at least 6 characters').required('Please enter the password'),
 });
 
+
+// Register Form component
+
 class Form extends Component {
+    static propTypes = {
+        onRegisterUserRequest: PropTypes.func,
+        isClose: PropTypes.bool,
+    };
+
     render() {
         const { onRegisterUserRequest, isClose } = this.props;
         return (
