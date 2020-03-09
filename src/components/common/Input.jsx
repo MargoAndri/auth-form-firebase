@@ -3,8 +3,7 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 
 const InputWrapper = styled.div`
-    margin-bottom: 25px;
-    margin-left: ${props => (props.special ? '10px' : '0')};
+    margin-bottom: 15px;
     width: 100%;
 `;
 
@@ -20,6 +19,10 @@ const FormInput = styled.input`
   outline: none;
   &::placeholder {
     opacity: 0.65;
+  }
+  &.invalid {
+    border-bottom: 1px solid rgb(191, 49, 12);
+    outline: none;
   }
 `;
 
